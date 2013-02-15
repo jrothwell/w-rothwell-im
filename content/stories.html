@@ -1,0 +1,20 @@
+---
+title: List of Stories
+---
+
+<!---
+© Jonathan Rothwell 2011-2013
+NOTE:
+This file is NOT in the public domain!
+It is presented here solely as an example for you to use if you're re-appropriating some of the other code from this site's Git repository. It is not to be republished, nor nanoc'd.
+-->
+
+<p>Here is a full list of the stories I've published on this site.</p>
+
+<ul>
+	<% sorted_stories.each do |story| %>
+		<li>
+			<%= link_to story[:title], story.path %>. <%= story[:desc] %>&nbsp;<em><%= round_nearest(100, word_count_of_story(story)) %> words</em>
+		</li>
+	<% end %>
+</ul>

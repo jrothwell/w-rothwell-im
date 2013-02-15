@@ -1,0 +1,6 @@
+output/
+crash.log
+config.yaml
+tmp/
+*.DS_Store
+content/stylesheet.css

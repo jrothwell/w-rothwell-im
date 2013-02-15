@@ -1,0 +1,31 @@
+---
+title: Home Page
+---
+
+<!---
+© Jonathan Rothwell 2011-2013
+NOTE:
+This file is NOT in the public domain!
+It is presented here solely as an example for you to use if you're re-appropriating some of the other code from this site's Git repository. It is not to be republished, nor nanoc'd.
+-->
+
+<p>I am <strong><a href="http://www.rothwell.im/about/">Jonathan Rothwell</a></strong>, Computer Science student by day and occasional writer by night.</p>
+
+<p>Occasionally, I write short stories for fun and put them up here for your enjoyment. Currently I'm aiming to write one new story every week to be posted on Friday or Saturday.</p>
+
+<p><strong><a href="/stories/">Full list of stories&nbsp;&rarr;</a></strong></p>
+
+<hr />
+
+<% newest_story = @site.sorted_stories.first %>
+
+<h2><%= link_to(newest_story[:title], newest_story) %></h2>
+<p><span class="metadata"><strong>New!</strong>&nbsp;(posted <%= newest_story[:date] %>)</span>&nbsp;<%= newest_story[:desc] %> <em><%= round_nearest(100, word_count_of_story(newest_story)) %> words</em> <%= link_to('Read &rarr;', newest_story, :class => "readme") %></p>
+
+<hr />
+
+<h2>Notes</h2>
+
+<p>This site is generated using <a href="http://nanoc.ws">nanoc</a>. For more information about me, and my set-up, visit the <a href="http://www.rothwell.im/about/">about page at my main web site</a>.</p>
+
+<p>Unlike my blog, these stories are <em>not</em> licensed under the Creative Commons licence.</p>

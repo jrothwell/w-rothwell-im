@@ -1,0 +1,3 @@
+This is the source code for the [w.rothwell.im](http://w.rothwell.im) fiction web site, built in [nanoc](http://nanoc.ws.)
+
+You may find it useful to re-appropriate some of the code if you're building your own web site to publish things like fiction, etc. All of this code written by me is released into the public domain. This does ***not*** apply to the contents of the `content` directory, which are provided 

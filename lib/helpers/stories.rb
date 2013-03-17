@@ -19,6 +19,14 @@ module Stories
 		end.reverse
 	end
 	
+	def word_count_of_all_stories
+		tc = 0
+		stories.each do |a|
+			tc += word_count_of_story(a)
+		end
+		return tc
+	end
+	
 	def word_count_of_story the_story
 		return word_count_of_content(the_story.compiled_content)
 	end
@@ -53,6 +61,10 @@ module Stories
 		else
 			return down
 		end
+	end
+	
+	def random_not_newest_story
+		stories.first(stories.size - 1).sample
 	end
 	
 	

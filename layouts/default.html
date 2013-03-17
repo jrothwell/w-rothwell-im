@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>rothwell.im stories: <%= @item[:title] %></title>
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+
+    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 
+    <meta author="Jonathan Rothwell">
+  </head>
+  <body>
+    <div id="main">
+      <h1><a href="http://rothwell.im" title="Jonathan Rothwell">rothwell.im</a> <strong><a title="rothwell.im stories" href="/">stories</a></strong></h1>
+      <%= yield %>
+      <footer>
+        <p>&copy; Jonathan Rothwell 2013&nbsp;&mdash;&nbsp;See the <a href="/copyright/">copyright licence</a>.</p>
+        <p class="ack">Statistics by <a href="http://gaug.es" title="gaug.es">gaug.es</a> (sets cookies.) Page background from <a href="http://subtlepatterns.com/noise-lines/">Subtle Patterns</a></p>
+      </footer>
+    </div>
+    <%= gauge_snippet %>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<title><%= @item[:title] %>, by Jonathan Rothwell</title>
+	<link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+
+	<meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 
+	<meta author="Jonathan Rothwell">
+  </head>
+  <body>
+	<div id="main">
+		<aside class="author"><strong><a href="/" title="Jonathan Rothwell">Jonathan Rothwell</a></strong> presents&hellip;</aside>
+		<% if @item[:title] %>
+		  <h1 class="story-title"><%= @item[:title] %></h1>
+		<% end %>
+		<hr class="bookend" />
+		<%= yield %>
+		<hr class="bookend" />
+		<% if @item[:thanks] %><aside><strong>Acknowledgments:</strong>&nbsp;I would like to thank <%= @item[:thanks] %></aside><% end %>
+		<aside><a href="http://w.rothwell.im/stories/" title="rothwell.im stories">More stories &rarr;</a>&nbsp;&mdash;&nbsp;Comments and correspondence welcome at <code>j</code> at <code>rothwell dot im</code>&nbsp;&mdash;&nbsp;Thank you for reading</aside>
+		<footer>
+			<p>
+				&copy;&nbsp;Jonathan Rothwell <% if @item[:date] %><%= attribute_to_time(@item[:date]).strftime("%Y") %><% else %>2013<% end %>&nbsp;&mdash;&nbsp;See the <a href="/copyright/">copyright licence</a>.
+			</p>
+			<p class="ack">Statistics by <a href="http://gaug.es" title="gaug.es">gaug.es</a> (sets cookies.) Page background from <a href="http://subtlepatterns.com/noise-lines/">Subtle Patterns</a></p>
+		</footer>
+	</div>
+		<%= gauge_snippet %>
+
+  </body>
+</html>

@@ -9,18 +9,18 @@ This file is NOT in the public domain!
 It is presented here solely as an example for you to use if you're re-appropriating some of the other code from this site's Git repository. It is not to be republished, nor nanoc'd.
 -->
 
-<p>I am <strong><a href="http://www.rothwell.im/about/">Jonathan Rothwell</a></strong>, Computer Science student by day and occasional writer by night.</p>
+<p>I am <strong><a href="http://www.rothwell.im/about/">Jonathan Rothwell</a></strong>, computer programmer by day and occasional writer by night.</p>
 
-<p>Sometimes I write short stories for fun and put them up here for your enjoyment. Currently I'm aiming to write one new story every week to be posted on Friday or Saturday.</p>
+<p>Sometimes I write short stories for fun and put them up here for your enjoyment. Currently I'm aiming to write one new story every week or two: I'll post an update on <a href="http://rothwell.im">my blog</a> when a new one gets posted.</p>
 
-<p><strong><a href="/stories/">Full list of stories&nbsp;&rarr;</a></strong></p>
+<p><strong><a href="/stories/">There are <%= stories.count %> stories on this site totalling <%= word_count_of_all_stories %> words. Full list&nbsp;&rarr;</a></strong></p>
 
 <hr />
 
 <% newest_story = @site.sorted_stories.first %>
 
-<h2><%= link_to(newest_story[:title], newest_story) %></h2>
-<p><span class="metadata"><strong>New!</strong>&nbsp;(posted <%= newest_story[:date] %>)</span>&nbsp;<%= newest_story[:desc] %> <em><%= round_nearest(100, word_count_of_story(newest_story)) %> words</em> <%= link_to('Read &rarr;', newest_story, :class => "readme") %></p>
+<h2>Newest story: <%= link_to(newest_story[:title], newest_story) %></h2>
+<p><span class="metadata">(posted <%= newest_story[:date] %>)</span>&nbsp;<%= newest_story[:desc] %> <em><%= round_nearest(100, word_count_of_story(newest_story)) %> words</em> <%= link_to('Read&nbsp;&rarr;', newest_story, :class => "readme") %></p>
 
 <hr />
 
